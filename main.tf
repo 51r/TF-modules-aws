@@ -19,7 +19,7 @@ resource "aws_instance" "instance1" {
 }
 
 resource "aws_instance" "instance2" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu2.id
   instance_type = "t2.micro"
   provider = aws.i2
   
