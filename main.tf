@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "ubuntu" {
-  ami           = "ami-0a244485e2e4ffd03"
+  ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   provider      = aws.ew2
   tags = {
@@ -26,8 +26,8 @@ resource "aws_instance" "ubuntu" {
   }
 }
 
-resource "aws_instance" "ubuntun" {
-  ami           = "ami-04aa66cdfe687d427"
+resource "aws_instance" "ubuntu2" {
+  ami           = data.aws_ami.ubuntu2.id
   instance_type = "t2.micro"
   provider      = aws.ec1
   tags = {
