@@ -34,7 +34,7 @@ module "instance" {
 }
 ```
 
-You will need to specify your variables for the regions. You can use the following example which includes 2 default AWS Regions eu-west-2 and eu-central-1:
+You will need to specify your variables for the regions. You can use the following example variables.tf which includes 2 default AWS Regions eu-west-2 and eu-central-1:
 ```
 variable "region1" {
   type    = string
