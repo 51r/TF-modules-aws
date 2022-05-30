@@ -4,24 +4,7 @@ This is a terraform module to demonstrate the passing provider configurations to
 The module will create 2 Ubuntu instances in two different regions. The region configurations are defined in the root module.
 
 # Prerequisite
-This guide applies to Mac, for other OS it may vary. You need to have terraform CLI installed on you workstation. In the guide below, we will be using [homebrew](https://brew.sh/)
-
-*  First, add the HashiCorp tap, a repository of all Hashicorp brew packages. 
-    ```
-    brew tap hashicorp/tap
-    ```
-* Now, install Terraform with hashicorp/tap/terraform.
-   ```
-   brew install hashicorp/tap/terraform
-   ```
-*  for any other OS click [here](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-
-**NOTE: This installs a signed binary and is automatically updated with every new official release.**
-
-* Check if Terraform is available with: 
-```
-terraform --version
-```
+* Installed [Terraform](https://www.terraform.io/downloads.html) `>=0.13`
 
 
 # How to use the repo
