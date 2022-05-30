@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 module "instance1" {
-  source = "https://github.com/51r/TF-modules-aws"
+  source = "github.com/51r/TF-modules-aws"
   providers = {
   aws.i1 = aws.r1
   aws.i2 = aws.r2
