@@ -9,7 +9,7 @@ The module will create 2 Ubuntu instances in two different regions. The region c
 
 # How to use the repo
 
-* You can check the directory "Example" in the repo, to see example configuration for the module.
+* You can check the directory "example" in the repo, to see example configuration for the module.
 
 Add the module to your configuration:
 ```
