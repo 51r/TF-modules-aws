@@ -1,24 +1,19 @@
 # The provider alias for the first instance
 provider "aws" {
-  alias  = "ew2"
-  region = "eu-west-2"
+  alias  = "r1"
+  region = var.region1
 }
+
 # The provicer alias for the second instance
 provider "aws" {
-  alias  = "ec1"
-  region = "eu-central-1"
+  alias  = "r2"
+  region = var.region2
 }
 
 module "instance1" {
   source = "https://github.com/51r/TF-modules-aws"
   providers = {
-    aws = aws.ew2
-  }
-}
-
-module "instance2" {
-  source = "https://github.com/51r/TF-modules-aws"
-  providers = {
-    aws = aws.ec1
+  aws.i1 = aws.r1
+  aws.i2 = aws.r2
   }
 }
