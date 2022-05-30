@@ -11,9 +11,7 @@ The module will create 2 Ubuntu instances in two different regions. The region c
 
 * You can check the directory "Example" in the repo, to see example configuration for the module.
 
-If you wish to add the following module to your configuration, keep in mind that you will have to specify your regions by adding 2 vars
-i1 and i2. You can use the following example code for your variables.tf, during plan execution you will be asked to specify your regions.
-
+Add the module to your configuration:
 ```
 # The provider alias for the first instance
 provider "aws" {
@@ -35,3 +33,17 @@ module "instance" {
   }
 }
 ```
+
+You will need to specify your variables for the regions. You can use the following example which includes 2 default AWS Regions eu-west-2 and eu-central-1:
+```
+variable "region1" {
+  type    = string
+  default = "eu-west-2"
+}
+
+variable "region2" {
+  type    = string
+  default = "eu-central-1"
+}
+```
+
