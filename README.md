@@ -4,46 +4,41 @@ This is a terraform module to demonstrate the passing provider configurations to
 The module will create 2 Ubuntu instances in two different regions. The region configurations are defined in the root module.
 
 # Prerequisite
-* Installed [Terraform](https://www.terraform.io/downloads.html) `>=0.13`
+* Install [Terraform](https://www.terraform.io/downloads.html) `>=0.13`
 
 
-# How to use the repo
+# How to use the module
 
-* You can check the directory "example" in the repo, to see example configuration for the module.
+* You can check the directory "example" in the repo, to download the example configuration for the module.
 
-Add the module to your configuration:
+1. Clone the repo to your local directory:
 ```
-# The provider alias for the first instance
-provider "aws" {
-  alias  = "r1"
-  region = var.region1
-}
-
-# The provider alias for the second instance
-provider "aws" {
-  alias  = "r2"
-  region = var.region2
-}
-
-module "instance" {
-  source = "github.com/51r/TF-modules-aws"
-  providers = {
-    aws.i1 = aws.r1
-    aws.i2 = aws.r2
-  }
-}
+git clone https://github.com/51r/TF-modules-aws.git
 ```
 
-You will need to specify your variables for the regions. You can use the following example variables.tf which includes 2 default AWS Regions eu-west-2 and eu-central-1:
+2. Make sure you are in the root of the repo:
 ```
-variable "region1" {
-  type    = string
-  default = "eu-west-2"
-}
-
-variable "region2" {
-  type    = string
-  default = "eu-central-1"
-}
+cd TF-modules-aws
 ```
 
+3. Then you can go to the example directory:
+```
+cd example
+```
+
+4. Initialize the Terraform:
+```
+terraform init
+```
+
+5. Check the Terraform plan:
+```
+terraform plan
+```
+
+6. Execute the plan:
+```
+terraform apply
+```
+
+7. Confirm that the two instances are created and are in the two different provided regions.
