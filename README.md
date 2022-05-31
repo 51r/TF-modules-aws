@@ -1,4 +1,4 @@
-# Terraform AWS Module creating 2 Ubuntu instances in different aws regions.
+# Terraform AWS Module creating 2 Ubuntu instances in different AWS regions.
 This is a terraform module to demonstrate the passing provider configurations to child modules.
 
 The module will create 2 Ubuntu instances in two different regions. The region configurations are defined in the root module.
